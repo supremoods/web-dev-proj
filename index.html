@@ -1,28 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>No Name</title>
-    <script src="https://kit.fontawesome.com/64d58efce2.js">
-    </script>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="container">
-        <i class="fab fa-dyalog"></i>
-        <div class="wrapper">
-            <h1>
-                Daily<span>Hits</span>
-            </h1>
-            <button class="btn-sign-up"><i class="fas fa-sign-in-alt"></i> Sign up</button>
-           
-            <div class="signUp-ftr">
-                <p>Already have an account?</p>
-                <a href="http://" >Sign in</a>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>No Name</title>
+        <script src="https://kit.fontawesome.com/64d58efce2.js"></script>
+        <link rel="stylesheet" href="style.css" />
+        <meta name="google-signin-client_id" content="685271077474-1tna6kjof6v1ocsc5h7pjlv70rkn9aiq.apps.googleusercontent.com"
+            />
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
+    </head>
+    <body>
+        <div class="container">
+            <i class="fab fa-dyalog"></i>
+            <div class="wrapper">
+                <h1>Daily<span>Hits</span></h1>
+                <button
+                    data-onsuccess="onSignIn"
+                    class="btn-sign-up" id="customBtn"
+                    data-longtitle="true">
+                    <i class="fas fa-sign-in-alt"></i> Sign up
+                </button>
+
+                <div class="signUp-ftr">
+                    <p>Already have an account?</p>
+                    <a href="http://">Sign in</a>
+                </div>
             </div>
-        </div>   
-    </div>
-</body>
+        </div>
+        <script>
+      var googleUser = {};
+      var startApp = function () {
+        gapi.load("auth2", function () {
+          // Retrieve the singleton for the GoogleAuth library and set up the client.
+          auth2 = gapi.auth2.init({
+            client_id: "685271077474-1tna6kjof6v1ocsc5h7pjlv70rkn9aiq.apps.googleusercontent.com",
+            cookiepolicy: "single_host_origin",
+            // Request scopes in addition to 'profile' and 'email'
+            //scope: 'additional_scope'
+          });
+          attachSignin(document.getElementById("customBtn"));
+        });
+      };
+
+      function attachSignin(element) {
+        console.log(element.id);
+        auth2.attachClickHandler(
+          element,
+          {},
+          function (googleUser) {
+            document.getElementById("name").innerText =
+              "Signed in: " + googleUser.getBasicProfile().getName();
+          },
+          function (error) {
+            alert(JSON.stringify(error, undefined, 2));
+          }
+        );
+      }
+      function onSignIn(googleUser) {
+  var profile = googleUser.getBasicProfile();
+  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+  console.log('Name: ' + profile.getName());
+  console.log('Image URL: ' + profile.getImageUrl());
+  console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+}
+    </script>
+     <script>startApp();</script>
+    </body>
 </html>

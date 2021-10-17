@@ -12,7 +12,8 @@
   --bg-dark: rgb(21, 32, 43);
   --bg-lightdark: rgb(29, 44, 58);
   --light-btn: rgb(253, 254, 255);
-  --main-color:rgb(119, 86, 254) ;
+  --light-hover: rgb(233, 227, 255);
+  --main-color: rgb(119, 86, 254);
 }
 
 body {
@@ -27,63 +28,66 @@ body {
   flex-direction: column;
 }
 
-.container .fa-dyalog{
-    padding: .6em;
-    color: var(--main-color);
-    font-size:6em;
+.container .fa-dyalog {
+  padding: 0.6em;
+  color: var(--main-color);
+  font-size: 6em;
 }
 
-
 .container .wrapper {
-    position: relative;
+  position: relative;
   background: var(--bg-lightdark);
   height: 400px;
   width: 430px;
   border-radius: 5%;
-  display:flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-    
 }
 
-.wrapper h1{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    color:var(--light-btn);
-    font-size:3.5em;
-    padding: 50px;
+.wrapper h1 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  color: var(--light-btn);
+  font-size: 3.5em;
+  padding: 50px;
 }
 
-.btn-sign-up{
-    padding: 10px;
-    font-size:16px;
-    border:none;
-    border-radius: 20em;
-    width: 60%;
-    background-color:var(--light-btn);
-    font-weight: bold;
-    margin-bottom:4.5em;
-    cursor: pointer;
-}
-.btn-sign-up i{
-    color: var(--main-color);
-}
-.signUp-ftr{
-    position: absolute;
-    display: flex;
-    bottom: 0;
-    padding: 2.4em;
+.btn-sign-up {
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 20em;
+  width: 60%;
+  background-color: var(--light-btn);
+  font-weight: bold;
+  margin-bottom: 4.5em;
+  cursor: pointer;
 }
 
-.signUp-ftr p{
-    color: var(--light-btn);
-    font-size:1em;
+.btn-sign-up:hover {
+  background: var(--light-hover);
 }
-.signUp-ftr a{
-    padding-left: 5px;
-    text-decoration: none;
-    color:var(--main-color);
+.btn-sign-up i {
+  color: var(--main-color);
 }
+.signUp-ftr {
+  position: absolute;
+  display: flex;
+  bottom: 0;
+  padding: 2.4em;
+}
+
+.signUp-ftr p {
+  color: var(--light-btn);
+  font-size: 1em;
+}
+.signUp-ftr a {
+  padding-left: 5px;
+  text-decoration: none;
+  color: var(--main-color);
+}
+
 
