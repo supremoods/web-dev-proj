@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth; 
+    font-family: Poppins;
+}
+
+body{
+    background-color: rgb(21, 32, 43);
+    position:absolute;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    display:flex;
+    position: relative;
+    background-color: rgb(29, 44, 58);
+    border-radius: 1.5em;
+}
+
+#wrapper{
+    display: flex;
+    padding: 2em 2em 0 2em;
+    margin: 2em;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.fa-dyalog{
+    color:rgb(119, 86, 254);
+    padding: .6em;
+    font-size:6em;
+}
+
+.checkbox{
+    margin: .8em 0 4.5em 0;
+    color: white;
+    font-size: .8em;
+}
+.checkbox a{
+    margin-left:1em;
+    color:rgb(119, 86, 254);
+    text-decoration: none;
+}
+ #user-name, #password{ 
+    font-family: Poppins;
+    align-items: center;
+    border-radius: .5em;
+    border-style: none;
+    width: 20em;
+    padding: .5em;
+    flex-direction: column;
+}
+.submit-button{
+    margin: 1.5em;
+    padding: .2em 1em;
+    width: 90%;
+    border-radius: 20em;
+    border-style: none;
+    font-weight:bolder;
+}
+footer{
+    margin-top: 1em;
+    font-size: 1em;
+    display: flex;
+    flex-direction: row;
+}
+footer p{
+    color: white;
+}
+footer a{
+    color:rgb(119, 86, 254);
+    text-decoration: none;
+    margin-left:1em;
+}
