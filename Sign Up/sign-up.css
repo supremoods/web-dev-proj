@@ -6,14 +6,29 @@
     font-family: "Poppins", sans-serif;
 }
 
+:root {
+  --bg-dark: rgb(21, 32, 43);
+  --bg-lightdark: rgb(29, 44, 58);
+  --light-btn: rgb(253, 254, 255);
+  --light-hover: rgb(233, 227, 255);
+  --main-color: rgb(119, 86, 254);
+}
+
 body {
     background-color: rgb(21, 32, 43);
+
   }
-  
+  .container {
+    height:100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+  }
   .signup-box {
     width: 360px;
     height: 580px;
-    margin: auto;
+
     background-color: rgb(29, 44, 58);
     border-radius: 20px;
   }  
