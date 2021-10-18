@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daily Hits</title>
+    <script src="https://kit.fontawesome.com/64d58efce2.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <i class="fab fa-dyalog"></i>
+      <div class="wrapper">
+        <h1>Daily<span>Hits</span></h1>
+        <button class="btn-sign-up" onclick="signUp()">
+          <i class="fas fa-sign-in-alt"></i> Sign up
+        </button>
+        <div class="signUp-ftr">
+          <p>Already have an account?</p>
+          <a href="login.html">Sign in</a>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    function signUp(){
+      window.location = 'sign_up.html';
+    }
+  </script>
+</html>
