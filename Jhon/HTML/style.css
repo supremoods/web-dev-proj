@@ -1,0 +1,14 @@
+
+.container{
+    margin: auto;
+    
+}
+.form{
+    border: 1px solid black;
+    width: 200px;
+    margin:0 auto;
+    padding: 10px;
+}
+.email,.password{
+    text-align: left;
+}
