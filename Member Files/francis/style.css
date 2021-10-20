@@ -34,7 +34,7 @@ h2{
 }
 .form{
     display: flex;
-    padding: 0 2em;
+    padding: 2em 2em 0 2em;
     margin: 2em;
     text-align: center;
     flex-direction: column;
@@ -51,17 +51,9 @@ h2{
     padding: .5em;
 }
 .email, .password{
-    padding-top: 1.3em;
+    padding-top: 2em;
     padding-bottom: .5em;
     display: flex;
     width:16em;
     justify-content: left;
-}
-.submit-button{
-    margin: 2em 1.5em 1.5em 1.5em;
-    padding: .5em 1em;
-    width: 90%;
-    border-radius: 20em;
-    border-style: none;
-    font-weight:bolder;
 }
