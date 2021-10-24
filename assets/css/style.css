@@ -12,6 +12,7 @@
   --bg-dark: rgb(21, 32, 43);
   --bg-lightdark: rgb(29, 44, 58);
   --light-btn: rgb(253, 254, 255);
+  --semi-light-txt: rgb(103, 120, 136);
   --light-hover: rgb(233, 227, 255);
   --main-color: rgb(119, 86, 254);
 }
@@ -26,6 +27,14 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  position: relative;
+  z-index: 1;
+  transition: all .5s ease-out;
+}
+
+.container.hide {
+  margin-top: -100em;
+ 
 }
 
 .container .fa-dyalog {
@@ -88,6 +97,180 @@ body {
   padding-left: 5px;
   text-decoration: none;
   color: var(--main-color);
+  cursor: pointer;
+}
+
+.signIn_box, .signUp_box {
+  height: 100%;
+  width: 40%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  opacity: 0;
+  transition: all 0.3s ease;
+  display: block;
+}
+
+.signIn_box a{
+  padding-left: 5px;
+  text-decoration: none;
+  color: var(--main-color);
+  cursor: pointer;
 }
 
 
+.signIn_box.show {
+  opacity: 1;
+  height: 100%;
+  z-index: 1;
+}
+
+.signUp_box.show {
+  opacity: 1;
+  height: 100%;
+  z-index: 1;
+}
+
+.signIn_box .modal-container {
+  background: var(--bg-lightdark);
+  height: 650px;
+  width: 530px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 1.5em;
+}
+.signUp_box .modal-container {
+  background: var(--bg-lightdark);
+  height: 850px;
+  width: 630px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 1.5em;
+}
+.modal-container .fa-times {
+  color: var(--semi-light-txt);
+  font-size: 1.3em;
+  padding: 14px;
+  cursor: pointer;
+}
+.modal i {
+  padding: 0.5em;
+  font-size: 6em;
+  color: var(--main-color);
+}
+
+.modal {
+  width: 100%;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+  
+}
+.modal p{
+  color: var(--semi-light-txt);
+}
+
+
+.txtBox {
+  border-radius: 20em;
+  font-size: 14px;
+  width: 100%;
+  padding: 10px;
+  background-color: var(--bg-lightdark);
+  border: none;
+  outline: none;
+  border: 1px solid var(--semi-light-txt);
+  color: var(--light-btn);
+}
+
+input[type="text"]::placeholder {
+  color: var(--semi-light-txt);
+}
+
+input[type="password"]::placeholder {
+  color: var(--semi-light-txt);
+}
+input[type="text"]:focus {
+  border: 1px solid var(--main-color);
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 20em;
+  -webkit-box-shadow: 0px 0px 15px 5px rgb(119, 86, 254, 0.75);
+  -moz-box-shadow: 0px 0px 15px 5px rgb(119, 86, 254, 0.75);
+  box-shadow: 0px 0px 15px 5px rgb(119, 86, 254, 0.75);
+}
+
+input[type="password"]:focus {
+  border: 1px solid var(--main-color);
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 20em;
+  -webkit-box-shadow: 0px 0px 15px 5px rgb(119, 86, 254, 0.75);
+  -moz-box-shadow: 0px 0px 15px 5px rgb(119, 86, 254, 0.75);
+  box-shadow: 0px 0px 15px 5px rgb(119, 86, 254, 0.75);
+}
+
+.login-btn,.signUp-btn {
+  position: absolute;
+  padding: 10px;
+  font-size: 14px;
+  border: none;
+  border-radius: 20em;
+  width: 85%;
+  background-color: var(--light-btn);
+  font-weight: bold;
+  cursor: pointer;
+  bottom: 0;
+  margin: 2em;
+}
+
+.date{
+  padding-top:.5em;
+  color: var(--semi-light-txt);
+}
+
+.datePick{
+  font-size: 14px;
+  background: var(--bg-lightdark);
+  color: var(--light-btn);
+  width: 20%;
+  border-radius: 20em;
+  padding: 10px;
+  cursor: pointer;
+}
+label{
+  padding: 10px;
+}
+.date-wrap{
+  padding-top:1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+ 
+}
+.datePick:focus{
+  border: 1px solid var(--main-color);
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 20em;
+  -webkit-box-shadow: 0px 0px 15px 5px rgb(119, 86, 254, 0.75);
+  -moz-box-shadow: 0px 0px 15px 5px rgb(119, 86, 254, 0.75);
+  box-shadow: 0px 0px 15px 5px rgb(119, 86, 254, 0.75);
+}
+
+.login-btn:hover {
+  background: var(--light-hover);
+}
+
+.signUp-btn:hover {
+  background: var(--light-hover);
+}

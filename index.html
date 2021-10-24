@@ -1,33 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Daily Hits</title>
-    <script src="https://kit.fontawesome.com/64d58efce2.js"></script>
-    <link rel="stylesheet" href="assets/css/style.css" />
-  </head>
 
-  <body>
-    <div class="container">
-      <i class="fab fa-dyalog"></i>
-      <div class="wrapper">
-        <h1>Daily<span>Hits</span></h1>
-        <button class="btn-sign-up" onclick="signUp()">
-          <i class="fas fa-sign-in-alt"></i> Sign up
-        </button>
-        <div class="signUp-ftr">
-          <p>Already have an account?</p>
-          <a href="login.html">Sign in</a>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daily Hits</title>
+  <script src="https://kit.fontawesome.com/64d58efce2.js"></script>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <i class="fab fa-dyalog"></i>
+    <div class="wrapper">
+      <h1>Daily<span>Hits</span></h1>
+      <button class="btn-sign-up">
+        <i class="fas fa-sign-in-alt"></i> Sign up
+      </button>
+      <div class="signUp-ftr">
+        <p>Already have an account?</p>
+        <a class="login-link">Sign in</a>
       </div>
     </div>
-  </body>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script>
-    function signUp(){
-      window.location = 'sign_up.html';
-    }
-  </script>
+  </div>
+
+  <!-- modal sign in -->
+  <div class="signIn_box">
+    <div class="modal-container">
+      <i class="fas fa-times hideS-I"></i>
+      <div class="modal">
+        <i class="fab fa-dyalog"></i>
+        <input class="txtBox" id="user-name" type="text" name="Username" placeholder="phone, email, or username"
+          required></input><br>
+        <input class="txtBox" id="password" type="password" name="password" placeholder="password" required></input><br>
+        <a class="login-link">Forgot Password?</a>
+        <button type="submit" value="Login" class="login-btn">Log in</button>
+
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- modal sign up -->
+  <div class="signUp_box">
+    <div class="modal-container">
+      <i class="fas fa-times hideS-U"></i>
+      <div class="modal">
+        <i class="fab fa-dyalog"></i>
+        <input class="txtBox" type="text" name="Username" placeholder="name" required></input><br>
+        <input class="txtBox" type="text" name="Username" placeholder="phone" required></input><br>
+        <input class="txtBox" type="text" name="Username" placeholder="username" required></input><br>
+        <input class="txtBox" type="text" name="Username" placeholder="email" required></input><br>
+        <input class="txtBox" type="password" name="password" placeholder="password" required></input><br>
+        
+  
+        <div class="date">
+          <p >Date of Birth</p>
+          <p>This will not be shown publicly. Confirm your own age, even if this account is for a business, a pet, or
+            something else.</p>
+            <div class="date-wrap">
+              <label for="day">Day:</label>
+              <select class="datePick" name="day" id="day"></select>
+   
+              <label for="month">Month:</label>
+              <select class="datePick" name="month" id="month"></select>
+   
+              <label for="year">Year:</label>
+              <select class="datePick" name="year" id="year">Year:</select>
+            </div>
+           
+    
+        </div>
+     
+        <button type="submit" value="Login" class="signUp-btn">Sign up</button>
+
+        </form>
+      </div>
+     
+    </div>
+  </div>
+</body>
+<script src="assets/java/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+
+
+</script>
+
 </html>
