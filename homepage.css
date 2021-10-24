@@ -8,27 +8,55 @@
   scroll-behavior: smooth;
 }
 
-
 :root {
     --bg-dark: rgb(21, 32, 43);
     --bg-lightdark: rgb(29, 44, 58);
     --light-btn: rgb(253, 254, 255);
+    --semi-light-txt: rgb(103, 120, 136);
     --light-hover: rgb(233, 227, 255);
     --main-color: rgb(119, 86, 254);
-}
+  }
+  
 
 body {
     background: var(--bg-dark);
 }
 
-.sideWrapper{
+.sideNav{
     height: 100vh;
     width: 25%;
     border: solid 1px;
     border-color: var(--bg-lightdark);
+    display: flex;
+}
+
+.logo{
+    font-size:2em;
+    color:var(--main-color);
+}
+.side-wrapper{
+    margin-left: 50%;
 
 }
 
+.sideNav .nav-bar .menu-list{
+    list-style: none;
+}
+
+.sideNav .nav-bar .menu-list .links{
+    padding-top:3em;
+}
+
+.sideNav .nav-bar .menu-list .links a{
+    text-decoration: none;
+    color: var(--light-btn);
+    font-size:20px;
+}
+
+.sideNav .nav-bar .menu-list .links i{
+    padding-right:20px;
+   font-size: 25px;
+}
 
 
 @media screen and (max-width: 600px) {
