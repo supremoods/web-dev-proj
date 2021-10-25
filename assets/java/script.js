@@ -1,6 +1,6 @@
 
 const hideMain = document.querySelector(".container");
-
+const loginlink = document.querySelector(".login-btn");
 const loginBtnlink = document.querySelector(".login-link");
 const showSignIn = document.querySelector(".signIn_box");
 const hideSignIn = document.querySelector(".hideS-I");
@@ -13,6 +13,10 @@ const hideSignUp = document.querySelector(".hideS-U");
 loginBtnlink.onclick = ()=>{
     showSignIn.classList.add("show");
     hideMain.classList.add("hide");
+}
+
+loginlink.onclick = ()=>{
+    window.location = 'homepage.html';
 }
 
 hideSignIn.onclick = ()=>{

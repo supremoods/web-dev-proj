@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --bg-dark: rgb(21, 32, 43);
+  --bg-lightdark: rgb(29, 44, 58);
+  --light-btn: rgb(253, 254, 255);
+  --semi-light-txt: rgb(103, 120, 136);
+  --light-hover: rgb(233, 227, 255);
+  --main-color: rgb(119, 86, 254);
+}
+
+body {
+  background: var(--bg-dark);
+}
+.container{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: initial;
+
+}
+.sidebar {
+  position: relative;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 22%;
+  padding-left:10%;
+
+  z-index: 99;
+  transition: all 0.3s ease;
+
+}
+
+.sidebar .logo-details {
+  padding-left:8%;
+  padding-top: 4em;
+  padding-bottom: 4em;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.sidebar .logo-details .logo {
+  position:fixed;
+  color: var(--main-color);
+  font-size: 50px;
+  font-weight: 600;
+}
+
+.sidebar i {
+  color: #fff;
+  height: 60px;
+  min-width: 50px;
+  font-size: 28px;
+  text-align: center;
+  line-height: 60px;
+}
+
+.sidebar .nav-list {
+    position:fixed;
+  margin-top: 20px;
+  height: 100%;
+}
+.sidebar li {
+  position: relative;
+  margin: 8px 0;
+  list-style: none;
+}
+.sidebar li a {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  border-radius: 12px;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+
+}
+
+.sidebar li a:hover {
+  background: var(--semi-light-txt);
+}
+
+.sidebar li a .links_name {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  white-space: nowrap;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+
+.content-card{
+  position: relative;
+  height:100%;
+  width: 50% ;
+  border-left: 1px solid var(--semi-light-txt);
+  border-right: 1px solid var(--semi-light-txt);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items:center;
+  transition: all 0.5s ease;
+  z-index: 2;
+  padding:2em;
+}
+
+
+.content-card .card{
+  height:30vh;
+  width:100%;
+  border: 1px solid var(--semi-light-txt);
+  border-bottom: 1px solid var(--semi-light-txt);
+  margin: 2em;
+  border-radius: 10px;
+}
+
