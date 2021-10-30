@@ -123,5 +123,12 @@ body {
   border-bottom: 1px solid var(--semi-light-txt);
   margin: 2em;
   border-radius: 10px;
+  display: flex;
+  justify-content:center;
+}
+
+.engagement-btn{
+  position: relative;
+ 
 }
 
