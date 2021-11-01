@@ -116,19 +116,48 @@ body {
 }
 
 
+
 .content-card .card{
-  height:30vh;
+  position: relative;
+  height:40vh;
   width:100%;
-  border: 1px solid var(--semi-light-txt);
-  border-bottom: 1px solid var(--semi-light-txt);
+  /* border: 1px solid var(--semi-light-txt); */
   margin: 2em;
   border-radius: 10px;
   display: flex;
   justify-content:center;
+  background:var(--bg-lightdark);
+
+  box-shadow: rgba(68, 214, 233, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
 .engagement-btn{
-  position: relative;
- 
+  position: absolute;
+  bottom: 0;
 }
 
+.btn-list{
+  list-style-type: none;
+  margin: auto;
+  overflow: hidden;
+
+}
+
+.btn-list li{
+  float :left;
+  justify-content: space-between;
+  padding:0 3em 1em 3em;
+}
+
+.btn-list li a{
+  font-size: 22px;
+  color: var(--light-btn);
+}
+
+
+.trends{
+  position: relative;
+  height: 100vh;
+  width:30%;
+
+}
