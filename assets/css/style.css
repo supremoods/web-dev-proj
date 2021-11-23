@@ -20,7 +20,41 @@
 body {
   background: var(--bg-dark);
 }
+.main-wrap{
+  height: 100%;
+  width: 100%;
+  display:flex;
+  overflow: hidden;
+}
+.cover{
+  height: 100vh;
+  width: 100%;
+  /* border-radius: 0% 10% 40% 0%; */
+  margin-left: 0%;
+  margin-top:0%;
+  
+  transform: scale(1.1);
+  overflow: hidden;
+  z-index: 100;
+}
 
+.cover .cover-art{
+  height: 100%;
+  margin-left: -30%;
+
+}
+
+
+.wrap-cont{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width:100%;
+  overflow: hidden;
+
+}
 .container {
   height: 100vh;
   display: flex;
@@ -110,7 +144,7 @@ body {
   z-index: -1;
   opacity: 0;
   transition: all 0.3s ease;
-  display: block;
+
 }
 
 .signIn_box a{
@@ -275,3 +309,43 @@ label{
   background: var(--light-hover);
 }
 
+@media screen and (max-width: 1000px) {
+  .main-wrap{
+    flex-direction: column;
+  }
+  .cover {
+    height: 40vh;
+    width: 100%;
+    /* border-radius: 0% 10% 40% 0%; */
+    position: relative;
+    z-index:-76;
+
+  }
+  .container {
+    padding-bottom: 10%;
+    height: 70%;
+    transform: scale(.8);
+  }
+  .cover .cover-art{
+    margin-left: 0%;
+    height: 120%;
+    width: 100%;
+    transform: scale(1.0);
+    
+  }
+  .signIn_box, .signUp_box {
+
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+
+  }
+
+  .wrap-cont{
+    background-color:red;
+  }
+
+}

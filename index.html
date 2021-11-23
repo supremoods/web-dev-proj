@@ -11,68 +11,77 @@
 </head>
 
 <body>
-  <div class="container">
-    <i class="fab fa-dyalog"></i>
-    <div class="wrapper">
-      <h1>Daily<span>Hits</span></h1>
-      <button class="btn-sign-up">
-        <i class="fas fa-sign-in-alt"></i> Sign up
-      </button>
-      <div class="signUp-ftr">
-        <p>Already have an account?</p>
-        <a class="login-link">Sign in</a>
-      </div>
+  <div class="main-wrap">
+    <div class="cover">
+      <img src="assets/img/morning_coffee_by_artfulbeast_ddi40pu-fullview.jpg" alt="" class="cover-art">
     </div>
-  </div>
-
-  <!-- modal sign in -->
-  <div class="signIn_box">
-    <div class="modal-container">
-      <i class="fas fa-times hideS-I"></i>
-      <div class="modal">
+    <div class = "wrap-cont">
+      <div class="container">
         <i class="fab fa-dyalog"></i>
-        <input class="txtBox" id="user-name" type="text" name="Username" placeholder="phone, email, or username"
-          required></input><br>
-        <input class="txtBox" id="password" type="password" name="password" placeholder="password" required></input><br>
-        <a class="login-link">Forgot Password?</a>
-        <button type="submit" value="Login" class="login-btn">Log in</button>
-
-        </form>
-      </div>
-    </div>
-  </div>
-
-  <!-- modal sign up -->
-  <div class="signUp_box">
-    <div class="modal-container"> 
-      <i class="fas fa-times hideS-U"></i>
-      <div class="modal">
-        <i class="fab fa-dyalog"></i>
-        <input class="txtBox" type="text" name="Username" placeholder="name" required></input><br>
-        <input class="txtBox" type="text" name="Username" placeholder="phone" required></input><br>
-        <input class="txtBox" type="text" name="Username" placeholder="username" required></input><br>
-        <input class="txtBox" type="text" name="Username" placeholder="email" required></input><br>
-        <input class="txtBox" type="password" name="password" placeholder="password" required></input><br>
-        <div class="date">
-          <p>Date of Birth</p>
-          <p>This will not be shown publicly. Confirm your own age, even if this account is for a business, a pet, or
-            something else.</p>
-          <div class="date-wrap">
-            <label for="day">Day:</label>
-            <select class="datePick" name="day" id="day"></select>
-
-            <label for="month">Month:</label>
-            <select class="datePick" name="month" id="month"></select>
-
-            <label for="year">Year:</label>
-            <select class="datePick" name="year" id="year">Year:</select>
+        <div class="wrapper">
+          <h1>Daily<span>Hits</span></h1>
+          <button class="btn-sign-up">
+            <i class="fas fa-sign-in-alt"></i> Sign up
+          </button>
+          <div class="signUp-ftr">
+            <p>Already have an account?</p>
+            <a class="login-link">Sign in</a>
           </div>
         </div>
-        <button type="submit" value="Login" class="signUp-btn">Sign up</button>
-        </form>
+      </div>
+    
+      <!-- modal sign in -->
+      <div class="signIn_box">
+        <div class="modal-container">
+          <i class="fas fa-times hideS-I"></i>
+          <div class="modal">
+            <i class="fab fa-dyalog"></i>
+            <input class="txtBox" id="user-name" type="text" name="Username" placeholder="phone, email, or username"
+              required></input><br>
+            <input class="txtBox" id="password" type="password" name="password" placeholder="password" required></input><br>
+            <a class="login-link">Forgot Password?</a>
+            <button type="submit" value="Login" class="login-btn">Log in</button>
+    
+            </form>
+          </div>
+        </div>
+      </div>
+    
+      <!-- modal sign up -->
+      <div class="signUp_box">
+        <div class="modal-container"> 
+          <i class="fas fa-times hideS-U"></i>
+          <div class="modal">
+            <i class="fab fa-dyalog"></i>
+            <input class="txtBox" type="text" name="Username" placeholder="name" required></input><br>
+            <input class="txtBox" type="text" name="Username" placeholder="phone" required></input><br>
+            <input class="txtBox" type="text" name="Username" placeholder="username" required></input><br>
+            <input class="txtBox" type="text" name="Username" placeholder="email" required></input><br>
+            <input class="txtBox" type="password" name="password" placeholder="password" required></input><br>
+            <div class="date">
+              <p>Date of Birth</p>
+              <p>This will not be shown publicly. Confirm your own age, even if this account is for a business, a pet, or
+                something else.</p>
+              <div class="date-wrap">
+                <label for="day">Day:</label>
+                <select class="datePick" name="day" id="day"></select>
+    
+                <label for="month">Month:</label>
+                <select class="datePick" name="month" id="month"></select>
+    
+                <label for="year">Year:</label>
+                <select class="datePick" name="year" id="year">Year:</select>
+              </div>
+            </div>
+            <button type="submit" value="Login" class="signUp-btn">Sign up</button>
+            </form>
+          </div>
+        </div>
       </div>
     </div>
+   
   </div>
+ 
 </body>
 <script src="assets/java/script.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
