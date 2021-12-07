@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+
+body{
+    margin: 0;
+    scroll-behavior: smooth; 
+    background-color:  rgb(21, 32, 43);
+}
+::-webkit-scrollbar {
+    display: none;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+/*start of navbar*/
+.wrapper{
+   margin: 0;
+   padding: 0;
+}
+.navbar ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2em;
+}
+.navbar li{
+    list-style: none;
+    margin: 0 2em;
+}
+.link{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1em;
+    letter-spacing: .2em;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+/* end of navbar */
+
+/* start of main div */
+.container{
+    margin: .5em;
+}
+.gallery{
+    height: auto;
+    margin: 0 ;
+}
+.gallery img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+@media (min-width: 640px) {
+    .container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, 300px);
+        grid-auto-flow: row dense;
+        margin: 2em;
+    }
+    .gallery{
+        margin: 0.3rem;
+    }
+}
+
+.container{
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(3, auto-flow);
+}
+.gallery:first-child,
+.gallery:nth-child(7),
+.gallery:nth-child(8),
+.gallery:nth-child(13),
+.gallery:nth-child(10),
+.gallery:nth-child(16),
+.gallery:nth-child(17)  {
+        grid-column: span 2;
+        grid-row: span 1;
+}
+
+    .gallery:nth-child(2){
+    grid-row: span 1;
+     grid-column: span 2;
+}
+/* end of main div */
